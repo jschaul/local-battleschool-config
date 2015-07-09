@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: install thunderbird
+      mac_pkg: pkg_type=app
+               url="http://download-installer.cdn.mozilla.net/pub/thunderbird/releases/38.0.1/mac/en-US/Thunderbird%2038.0.1.dmg"
+               archive_type=dmg archive_path='Thunderbird.app'
+      sudo: yes
